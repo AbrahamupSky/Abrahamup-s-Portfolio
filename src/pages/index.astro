@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Badge from '../components/Badge.astro'
+import GitHubIcon from '../components/icons/GitHub.astro'
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import SocialPill from '../components/icons/SocialPill.astro'
+import MailIcon from '../components/icons/Mail.astro'
+import Experience from '../components/Experience.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Briefcase from '../components/icons/Briefcase.astro'
+import CodeIcon from '../components/icons/CodeIcon.astro'
+import Projects from '../components/Projects.astro'
+---
+
+<Layout title="Abrahamup's Portfolio - Programmer and Developer Web">
+  <main class="px-4">
+    <SectionContainer class='py-44'>
+      <img
+        class='rounded-full size-12 mb-4'
+        src='/public/yo.jpg'
+        alt='Abrahamup photo'
+      />
+      <h1 class='text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10'>
+        Hello, I'm Abraham
+        <a
+          href='https://www.linkedin.com/in/abraham-urrutia-ab5abb191/'
+          class='flex justify-center items-center'
+          target='_blank'
+          rel='noopener'
+        >
+          <Badge>Open to Work</Badge>
+        </a>
+      </h1>
+
+      <h2 class='text-xl lg:text-2xl text-wrap ma-w-[700px]'>
+        Web developer. From Guadalajara, <span class='text-green-600'>Me</span
+        >xi<span class='text-red-600'>co</span>, currently living in the United <span
+          class='text-blue-600'>States</span
+        >, Texas. I like to create unique applications
+      </h2>
+
+      <nav class='flex gap-4 mt-8 flex-wrap'>
+        <SocialPill
+          href='https://www.linkedin.com/in/abraham-urrutia-ab5abb191/'
+        >
+          <LinkedInIcon class='size-5 md:size-6' />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href='https://github.com/AbrahamupSky'>
+          <GitHubIcon class='size-5 lg:size-6' />
+          GitHub
+        </SocialPill>
+        <SocialPill href='mailto:abrahamup7@gmail.com'>
+          <MailIcon class='size-5 lg:size-6' />
+          abrahamup7@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class='text-2xl font-semibold mb-6 gap-x-3 flex items-center'>
+				<Briefcase class="size-7" />
+				Work Experience
+			</h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class='text-2xl font-semibold mb-6 gap-x-3 flex items-center'>
+				<CodeIcon class="size-7" />
+				Projects
+			</h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>

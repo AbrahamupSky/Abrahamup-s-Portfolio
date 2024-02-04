@@ -5,6 +5,10 @@ import Tailwind from './icons/Tailwind.astro'
 import NextJS from './icons/NextJS.astro'
 import Python from './icons/Python.astro'
 import SQLite from './icons/SQLite.astro'
+import HTMLIcon from './icons/HTML.astro'
+import CSSIcon from './icons/CSS.astro'
+import JavaScriptIcon from './icons/JS.astro'
+import { link } from 'fs'
 
 const TAGS = {
   Django: {
@@ -42,6 +46,24 @@ const TAGS = {
     class: 'bg-white/10 text-white',
     icon: NextJS,
   },
+
+  HTML: {
+    name: 'HTML',
+    class: 'bg-white/10 text-white',
+    icon: HTMLIcon,
+  },
+
+  CSS: {
+    name: 'CSS',
+    class: 'bg-white/10 text-white',
+    icon: CSSIcon,
+  },
+
+  JavaScript: {
+    name: 'JavaScript',
+    class: 'bg-white/10 text-white',
+    icon: JavaScriptIcon,
+  }
 }
 
 const PROJECTS = [
@@ -51,9 +73,22 @@ const PROJECTS = [
       'Application focused on the registration of customers and workers for a crane company, in which it is possible to see the address or location of the customer who requested the crane so that the operator can arrive, as well as to mark the work as completed and upload an image.',
     link: '#',
     github: '#',
-    image: '/public/projects/CompuDesk.jpg',
+    image: '/projects/CompuDesk.jpg',
     tags: [TAGS.Django, TAGS.Bootstrap, TAGS.SQLite],
   },
+  {
+    title: 'Innovation and Development Open Platform - PLAi',
+    description: "Static web page which displays PLAi's team",
+    link: 'https://plai.mx/directorio',
+    image: '/projects/directorio-plai.jpg',
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
+  },
+  {
+    title: 'PLAi Tenders',
+    description: 'Development of a web application for the control of tenders, reflecting the changes in real time in a table that the user could see, filtering by years, categories, etc.',
+    image: '/projects/tenders-plai.png',
+    tags: [TAGS.Django, TAGS.Bootstrap, TAGS.SQLite],
+  }
 ]
 ---
 
@@ -65,14 +100,14 @@ const PROJECTS = [
       <ul class="flex gap-x-4 flex-row mb-3">
         {tags.map((tag) => (
           <li>
-            <span class={`rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2 text-xs md:text-base md:py-2 lg:px-4 bg-white/5 hover:scale-110 hover:bg-white/10 transition ${tag.class}`}>
+            <span class={`rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2 text-xs md:text-base md:py-2 lg:px-4 bg-white/5 hover:scale-110 hover:bg-white/10 transition hover:cursor-default ${tag.class}`}>
               <tag.icon class='size-8' /> {tag.name}
             </span>
           </li>
         ))}
       </ul>
       <img
-        class='rounded shadow-2xl shadow-white/10'
+        class='rounded shadow-2xl shadow-white/10 mb-12'
         src={image}
         alt={`Screenshot of the project ${image}`}
       />

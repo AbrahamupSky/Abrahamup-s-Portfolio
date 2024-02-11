@@ -8,6 +8,7 @@ import SQLite from './icons/SQLite.astro'
 import HTMLIcon from './icons/HTML.astro'
 import CSSIcon from './icons/CSS.astro'
 import JavaScriptIcon from './icons/JS.astro'
+import JQuery from './icons/JQuery.astro'
 
 const TAGS = {
   Django: {
@@ -63,6 +64,12 @@ const TAGS = {
     class: 'bg-yellow-500 text-white',
     icon: JavaScriptIcon,
   },
+
+  JQuery: {
+    name: 'JQuery',
+    class: 'bg-blue-500 text-white',
+    icon: JQuery,
+  }
 }
 
 const PROJECTS = [
@@ -87,7 +94,7 @@ const PROJECTS = [
     description:
       'Development of a web application for the control of tenders, reflecting the changes in real time in a table that the user could see, filtering by years, categories, etc.',
     image: '/projects/tenders-plai.png',
-    tags: [TAGS.Django, TAGS.Bootstrap, TAGS.SQLite],
+    tags: [TAGS.Django, TAGS.Bootstrap, TAGS.SQLite, TAGS.JQuery],
   },
   {
     title: '- Innovation and Development Open Platform - PLAi',

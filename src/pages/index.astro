@@ -11,6 +11,7 @@ import Briefcase from '../components/icons/Briefcase.astro'
 import CodeIcon from '../components/icons/CodeIcon.astro'
 import Projects from '../components/Projects.astro'
 import PhoneIcon from '../components/icons/Phone.astro'
+import Profile from '../components/icons/Profile.astro'
 ---
 
 <Layout title="Abrahamup's Portfolio - Programmer and Developer Web">
@@ -68,12 +69,19 @@ import PhoneIcon from '../components/icons/Phone.astro'
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="projects">
+    <SectionContainer class="py-10" id="projects">
       <h2 class='text-2xl font-semibold mb-6 gap-x-3 flex items-center'>
 				<CodeIcon class="size-7" />
 				Projects
 			</h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer class="py-10" id="about">
+      <h2 class='text-2xl font-semibold mb-6 gap-x-3 flex items-center'>
+				<Profile class="size-7" />
+				About me
+			</h2>
     </SectionContainer>
   </main>
 </Layout>
